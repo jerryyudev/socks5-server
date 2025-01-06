@@ -87,7 +87,7 @@ import select #导入select模块
 def start_proxy_server():
     server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1) #添加端口复用
-    server.bind(('0.0.0.0', 17650))
+    server.bind(('0.0.0.0', 17650)) #这里可以修改端口号
     server.listen(5)
     print("SOCKS5 Proxy Server started on port 17650")
 
