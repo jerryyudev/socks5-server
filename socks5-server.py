@@ -89,7 +89,7 @@ def start_proxy_server():
     server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1) #添加端口复用
     server.bind(('0.0.0.0', 17650)) #这里可以修改端口号
     server.listen(5)
-    print("SOCKS5 Proxy Server started on port 17650")
+    print("SOCKS5 Proxy Server started on port 17650") #测试：curl --socks5 85.194.243.117:17650 ip-api.com
 
     while True:
         client_socket, addr = server.accept()
